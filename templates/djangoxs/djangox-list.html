@@ -1,0 +1,9 @@
+{% extends '_base.html'%}
+
+{% block content %}
+<p> Djangoxs</p>
+<a href="{% url 'djangox_create'%}">Create</a>
+{% for bread in object_list %}
+<a href="{% url 'djangox_detail' djangox.id %}"> {{ djangox }}</a>
+{% endfor%}
+{% endblock content %}

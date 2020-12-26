@@ -1,0 +1,9 @@
+{% extends '_base.html'%}
+
+{% block content %}
+<p> Details about: {{djangox.name}} </p>
+<p> Description: {{djangox.description}}</p>
+<p> Djangox Type: {{ djangox.djangox_type</p>
+<p><a href="{% url 'djangox_update' djangox.id %}"> + edit</a></p>
+<p><a href="{% url 'djangox_delete' djangox.id %}"> + delete</a></p>
+{% endblock content %}

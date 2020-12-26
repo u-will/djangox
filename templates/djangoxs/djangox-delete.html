@@ -1,0 +1,11 @@
+{% extends '_base.html'%}
+
+{% block content %}
+<p> this is the delete view</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> Do ypu really want to delete "{{ djangox.name }}"?</p>
+    <input type='submit' value='OK'>
+    <a href="{{ view.get_success_url }}" class="btn btn-secondary"> Cancel</a>
+</form>
+{% endblock content %}
